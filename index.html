@@ -104,7 +104,9 @@
                   <h1 class="mb-4 mt-3">I'm <span>Sheffin Mohammed</span></h1>
                   <h2 class="mb-4">A Web Developer</h2>
                   <p>
-                    <a href="#contact-section" class="btn btn-primary py-3 px-4">Hire me</a>
+                    <a href="#contact-section" class="btn btn-primary py-3 px-4"
+                      >Hire me</a
+                    >
                     <a
                       href="#projects-section"
                       class="btn btn-white btn-outline-white py-3 px-4"
@@ -140,7 +142,9 @@
                     I'm a <span>web Developer</span> based in India
                   </h1>
                   <p>
-                    <a href="#contact-section" class="btn btn-primary py-3 px-4">Hire me</a>
+                    <a href="#contact-section" class="btn btn-primary py-3 px-4"
+                      >Hire me</a
+                    >
                     <a
                       href="#projects-section"
                       class="btn btn-white btn-outline-white py-3 px-4"
@@ -633,7 +637,7 @@
                 <span class="icon-map-signs"></span>
               </div>
               <h3 class="mb-4">Address</h3>
-              <p>Kakkanad,Kochi, Eranamkulam Kerala 682030 </p>
+              <p>Kakkanad,Kochi, Eranamkulam Kerala 682030</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -655,7 +659,11 @@
                 <span class="icon-paper-plane"></span>
               </div>
               <h3 class="mb-4">Email Address</h3>
-              <p><a href="mailto:info@yoursite.com">mohammedsheffin8@gmail.com</a></p>
+              <p>
+                <a href="mailto:info@yoursite.com"
+                  >mohammedsheffin8@gmail.com</a
+                >
+              </p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -673,28 +681,29 @@
 
         <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-light p-4 p-md-5 contact-form">
+            <form id="contactForm" class="bg-light p-4 p-md-5 contact-form">
               <div class="form-group">
                 <input
                   type="text"
+                  id="nameInput"
                   class="form-control"
                   placeholder="Your Name"
                 />
               </div>
               <div class="form-group">
                 <input
-                  type="text"
+                  type="email"
+                  id="emailInput"
                   class="form-control"
                   placeholder="Your Email"
                 />
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject" />
+                <input type="text" id="subjectInput" class="form-control" placeholder="Subject" />
               </div>
               <div class="form-group">
                 <textarea
-                  name=""
-                  id=""
+                  id="messageInput"
                   cols="30"
                   rows="7"
                   class="form-control"
@@ -703,18 +712,20 @@
               </div>
               <div class="form-group">
                 <input
-                  type="submit"
+                  type="button"
                   value="Send Message"
                   class="btn btn-primary py-3 px-5"
+                  onclick="sendEmail()"
                 />
               </div>
             </form>
           </div>
+        
 
           <div class="col-md-6 d-flex">
             <div
               class="img"
-              style="background-image: url(images/about.jpg)"
+              style="background-image: url(images/myImage3.png)"
             ></div>
           </div>
         </div>
@@ -852,7 +863,9 @@
               </script>
               All rights reserved | This website is made with
               <i class="icon-heart color-danger" aria-hidden="true"></i> by
-              <a href="https://sheffin.online/" target="_blank">Sheffin Mohammed</a>
+              <a href="https://sheffin.online/" target="_blank"
+                >Sheffin Mohammed</a
+              >
             </p>
           </div>
         </div>
@@ -896,6 +909,17 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/scrollax.min.js"></script>
+    <script src="js/mail.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "Negf70JbRH-SP0dY9",
+  });
+})();
+</script>
 
     <script src="js/main.js"></script>
   </body>
